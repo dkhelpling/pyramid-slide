@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+
+            body {
+                text-align: center;
+                font-family: "Courier New", monospace;              
+                background-color: purple;
+                color: white;
+                padding-left: 40px;
+                padding-top: 30px;
+            }
+            #pyramid {
+                text-align: left;
+                line-height: 0;
+                font-size: 30px;
+                margin: 100px;
+                padding-left: 400px;
+                border: 2px solid white;
+                border-radius: 12px;
+                color: black;
+                background-color: white;
+                
+            }
+    
+            html {
+                background-color:black;
+            }
+    </style>
+</head>
+<body>
+    
+    <div id='functions'>
+        <h1 id='title'>Pyramid Slide</h1>
+        <form>
+                <br><br>
+                Select brick: 
+            <select onchange="determineHeightAndThenDrawPyramid()" id="symbol">
+                <option value="#">#</option>
+                <option value="@">@</option>
+                <option value="X">X</option>
+                <option value="$">$</option>
+            </select>
+        
+            How high: 
+            <input type="range" oninput="determineHeightAndThenDrawPyramid()" name="pyramid" min="0" max="10" id="height">
+            <p id="demo"></p>
+        </form>
+
+        <br><br>
+    
+    </div> 
+    <div id="pyramid"></div>     
+
+    
+
+    <script src="pyramid.js"></script>
+</body>
+</html>
+
